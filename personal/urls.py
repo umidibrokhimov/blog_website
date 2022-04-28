@@ -1,6 +1,8 @@
-from django.urls import path, include
+from django.urls import path
 from .views import *
 
+app_name = 'personal'
+
 urlpatterns = [
-    path('12/', Nimadir),
+    path('portfolio/<int:pk>/', PortfolioDetail.as_view())
 ]

@@ -19,7 +19,9 @@ class Portfolio(models.Model):
     description = models.TextField(max_length=50)
     img = models.ImageField()
     category = models.OneToOneField(Category, on_delete=models.CASCADE)
-    project_url = models.URLField(max_length=15)
+    project_url = models.URLField(max_length=50)
+    date = models.DateField()
+    github_link = models.URLField(max_length=50)
 
     def __str__(self):
         return self.name

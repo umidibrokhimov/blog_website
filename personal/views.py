@@ -1,8 +1,13 @@
 from django.shortcuts import render
+from django.views.generic import ListView, DetailView
+from .models import Portfolio
 
-# Create your views here.
-def Home(request):
-    return render(request, 'index.html')
+class Home(ListView):
+    template_name = 'index.html'
+    context_object_name = 'portfolios'
+    queryset = Portfolio.objects.all()
 
-def Nimadir(request):
-    return render(request, 'blog-single.html')
+class PortfolioDetail(DetailView):
+    template_name = 'portfolio-details.html'
+    context_object_name = 'portfolio'
+    queryset = Portfolio.objects.all()

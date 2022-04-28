@@ -4,6 +4,6 @@ from personal.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Home),
+    path('', Home.as_view()),
     path('', include('personal.urls'))
 ]
