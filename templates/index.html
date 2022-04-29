@@ -5,14 +5,9 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     
-    <title>Umidjon Ibrokhimov's - DevFolio</title>
+    <title>Umidjon Ibrokhimov - Welcome!</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-    
-    <!-- Favicons -->
-    <link href="{% static 'img/favicon.png' %}" rel="icon">
-    <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-    
     <!-- Vendor CSS Files -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
@@ -303,43 +298,25 @@
                         
                         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                             <div class="swiper-wrapper">
-                                
+                                {% for partner in partners %}
                                 <div class="swiper-slide">
                                     <div class="testimonial-box">
                                         <div class="author-test">
                                             <img src="{% static 'img/testimonial-2.jpg' %}" alt="" class="rounded-circle b-shadow-a">
-                                            <span class="author">Xavi Alonso</span>
+                                            <span class="author">{{partner.name}}</span>
                                         </div>
                                         <div class="content-test">
                                             <p class="description lead">
-                                                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
-                                                consectetur adipiscing elit.
+                                                {{partner.about}}
                                             </p>
                                         </div>
                                     </div>
                                 </div><!-- End testimonial item -->
-                                
-                                <div class="swiper-slide">
-                                    <div class="testimonial-box">
-                                        <div class="author-test">
-                                            <img src="{% static 'img/testimonial-4.jpg' %}" alt="" class="rounded-circle b-shadow-a">
-                                            <span class="author">Marta Socrate</span>
-                                        </div>
-                                        <div class="content-test">
-                                            <p class="description lead">
-                                                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
-                                                consectetur adipiscing elit.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div><!-- End testimonial item -->
+                                {% endfor %}
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         
-                        <!-- <div id="testimonial-mf" class="owl-carousel owl-theme">
-                            
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -355,7 +332,7 @@
                                 Blog
                             </h3>
                             <p class="subtitle-a">
-                                Bu yerda mening shaxsiy hayotdagi yutuqlarim, fikrlarim berib boriladi
+                                Here are my achievements and thoughts in my personal life.
                             </p>
                             <div class="line-mf"></div>
                         </div>
@@ -453,15 +430,13 @@
                                         </div>
                                         <div class="more-info">
                                             <p class="lead">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem
-                                                expedita aperiam aliquid at.
-                                                Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis
-                                                mollitia inventore?
+                                                16 years old frontend web programmer, crypto fan and spicy coffee lover person.
+                                                <br>
                                             </p>
                                             <ul class="list-ico">
-                                                <li><span class="bi bi-geo-alt"></span> 329 WASHINGTON ST BOSTON, MA 02108</li>
-                                                <li><span class="bi bi-phone"></span> (617) 557-0089</li>
-                                                <li><span class="bi bi-envelope"></span> contact@example.com</li>
+                                                <li><span class="bi bi-geo-alt"></span> Tashkent, Uzbekistan</li>
+                                                <li><span class="bi bi-phone"></span> +998 (94) 100 25 24</li>
+                                                <li><span class="bi bi-envelope"></span> umidjonibrokhimovm@gmail.com </li>
                                             </ul>
                                         </div>
                                         <div class="socials">

@@ -15,6 +15,7 @@ class Home(ListView):
         # here we can add so many context using that way
         context['portfolios'] = Portfolio.objects.all()
         context['blogs'] = Blog.objects.all()
+        context['partners'] = Partner.objects.all()
         return context
 
 class PortfolioDetail(DetailView):
