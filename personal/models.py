@@ -31,7 +31,13 @@ class Blog(models.Model):
         verbose_name = 'Blog'
         verbose_name_plural = 'Blog'
     
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=40)
     description = models.TextField(max_length=1000)
+    description_next = models.TextField(max_length=1000)
     category = models.OneToOneField(Category, on_delete=models.CASCADE)
     img = models.ImageField()
+    quote = models.CharField(max_length=50)
+    date = models.DateField()
+
+    def __str__(self):
+        return self.name

@@ -3,3 +3,4 @@ from .models import *
 
 admin.site.register(Portfolio)
 admin.site.register(Category)
+admin.site.register(Blog)
