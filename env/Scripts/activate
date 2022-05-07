@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Professional\Desktop\DevFolio\env"
+VIRTUAL_ENV="D:\desktop\DevFolio\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
